@@ -27,7 +27,7 @@ func main() {
 	// to copy the value of i to ip2 using pointer
 	// this is done by dereferencing the pointer *ip2
 	// this way will change the value of i by the pointer
-	
+
 	var ip2 *int = &i
 
 	fmt.Println("address of i : i", ip2) // the address of i2 is same as the address of i
@@ -35,5 +35,6 @@ func main() {
 
 	*ip2 = *ip2 + 6
 	fmt.Println("value of i after incrementing ip2 : ", *ip2)
+	fmt.Println("value of i : ", i)
 
 }
