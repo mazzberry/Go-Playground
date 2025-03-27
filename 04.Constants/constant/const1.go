@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 )
 
@@ -41,4 +42,42 @@ func main() {
 	fmt.Printf("Type: %T Value: %v\n", y, y)
 	fmt.Printf("Type: %T Value: %v\n", z, z)
 
+	// V-Course
+
+	fmt.Print(Pending, Shipped, Cancelled, Returned, Completed, Delivered)
+
+	order1 := Order{ID: 1, Price: 100, status: Pending}
+	order2 := Order{ID: 2, Price: 200, status: Shipped}
+	order3 := Order{ID: 3, Price: 300, status: Cancelled}
+
+	fmt.Println(order1)
+	fmt.Println(order2)
+	fmt.Println(order3)
+
+	order1Json, _ := json.Marshal(order1)
+	order2Json, _ := json.Marshal(order2)
+	order3Json, _ := json.Marshal(order3)
+	
+
+	fmt.Println(string(order1Json))
+	fmt.Println(string(order2Json))
+	fmt.Println(string(order3Json))
+
 }
+
+type Order struct {
+	ID     int
+	Price  int
+	status Orderstatus
+}
+
+type Orderstatus int
+
+const (
+	Pending   Orderstatus = iota // 0
+	Shipped                      //1
+	Cancelled                    //2
+	Returned                     //3
+	Completed                    //4
+	Delivered                    //5
+)
