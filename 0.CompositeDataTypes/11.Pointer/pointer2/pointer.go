@@ -18,14 +18,17 @@ func main() {
 
 	i := 20
 
-	// Change number by reference
-	fmt.Println("addres of i : ", &i)
-	fmt.Println(changeNumberByReference(&i))
-	fmt.Println("value of i after change by reference : ", i)
 
 	// Change number by value
 	fmt.Println("addres of i : ", &i)
 	fmt.Println(changeNumberByValue(i))
 	fmt.Println("value of i after change by value : ", i)
 
+
+	// Change number by reference
+	fmt.Println("addres of i : ", &i)
+	fmt.Println(changeNumberByReference(&i))
+	fmt.Println("value of i after change by reference : ", i)
+
+	
 }
