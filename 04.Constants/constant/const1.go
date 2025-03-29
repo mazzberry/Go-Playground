@@ -12,7 +12,7 @@ func main() {
 
 	// defining constant without needing declare type
 
-	// named untype constant
+	// named untyped constant
 	const a = 1
 	const b = "circle"
 	const c = 5.4
@@ -43,9 +43,9 @@ func main() {
 	fmt.Printf("Type: %T Value: %v\n", z, z)
 
 	const (
-		name = "mohammadreza"
+		name = "Mohammadreza"
 		age  = 21
-		city = "minu"
+		city = "menu"
 		language = "Golang"
 	)
 
@@ -73,6 +73,10 @@ func main() {
 	fmt.Println(string(order2Json))
 	fmt.Println(string(order3Json))
 
+	const googleBaseURL = "https://www.google.com"
+	const googleMapUrl = "/maps"
+	
+	fmt.Println(googleBaseURL + googleMapUrl)
 }
 
 type Order struct {
@@ -91,3 +95,7 @@ const (
 	Completed                    //4
 	Delivered                    //5
 )
+
+
+
+
