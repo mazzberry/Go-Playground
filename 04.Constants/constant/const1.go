@@ -42,6 +42,16 @@ func main() {
 	fmt.Printf("Type: %T Value: %v\n", y, y)
 	fmt.Printf("Type: %T Value: %v\n", z, z)
 
+	const (
+		name = "mohammadreza"
+		age  = 21
+		city = "minu"
+		language = "Golang"
+	)
+
+	fmt.Printf("i'm %s that in age of %d years learning %s\n", name, age, language)
+
+
 	// V-Course
 
 	fmt.Print(Pending, Shipped, Cancelled, Returned, Completed, Delivered)
