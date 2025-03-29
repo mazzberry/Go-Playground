@@ -22,7 +22,7 @@ func main() {
 	fmt.Println(b)
 	// 5
 	n, k, l := "hello", 1, 1.5 // define a few variables in one line
-	var p, o, i = "world", 13, 24
+	var p, o, i = "world", 13, 24 
 	fmt.Println(n, k, l, p, o, i)
 	// 6
 
