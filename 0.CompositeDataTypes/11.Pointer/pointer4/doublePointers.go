@@ -7,8 +7,27 @@ func main() {
 	b := &a
 	c := &b
 
-	fmt.Println("pointer b value: ", b)
-	fmt.Println("pointer c value: ", c)
-	fmt.Println("pointer c point to: ", *c)
-	fmt.Println("get value by double pointer: ", **c)
+	fmt.Printf("a = %d\n", a)
+	fmt.Printf("b = %d\n", b)
+	fmt.Printf("c = %d\n", c)
+
+	fmt.Println()
+	fmt.Printf("a = %d\n", a)
+	fmt.Printf("*&a = %d\n", *&a)
+	fmt.Printf("*b = %d\n", *b)
+	fmt.Printf("**c = %d\n", **c)
+
+	fmt.Println()
+	fmt.Printf("&a: %d\n", &a)
+	fmt.Printf("b: %d\n", b)
+	fmt.Printf("&*b: %d\n", &*b)
+	fmt.Printf("*&b: %d\n", *&b)
+	fmt.Printf("*c: %d\n", *c)
+
+	fmt.Println()
+	fmt.Printf("&b: %d\n", &b)
+	fmt.Printf("c: %d\n", c)
+	fmt.Printf("*c: %d\n", *c)
+	fmt.Printf("**c: %d\n", **c)
+
 }
