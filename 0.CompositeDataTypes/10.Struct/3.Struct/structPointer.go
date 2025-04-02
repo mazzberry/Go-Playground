@@ -8,6 +8,7 @@ type employee struct {
 	salary float32
 }
 
+//add: implement employee struct with pointer demonstration
 func main() {
 	
 	emp := employee{name: "Mohammad", age: 21, salary: 15000.0}
