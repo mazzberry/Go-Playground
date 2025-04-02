@@ -30,4 +30,8 @@ func main() {
 
 	fmt.Println(emp1.name, emp2.name)
 
+	emp1.name = "john smith" // update the value of name field {{2.2.3}}
+
+	fmt.Printf("Employee 1 after update: %+v\n", emp1)
+
 }
