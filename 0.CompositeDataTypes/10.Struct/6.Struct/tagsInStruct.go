@@ -1,4 +1,4 @@
-package main
+package main // 2.2.6
 
 import (
 	"encoding/json"
@@ -17,7 +17,7 @@ func main() {
 	// Converting to json
 	empJSON, err := json.MarshalIndent(emp, "", "  ")
 	if err != nil {
-		log.Fatal(err.Error())
+		log.Fatalf(err.Error())
 	}
 	fmt.Println(string(empJSON))
 
@@ -33,7 +33,7 @@ func main() {
 	lemp := lowerEmployee{Name: "ali", Age: 25, Salary: 60000.0}
 	lempJSON, err := json.MarshalIndent(lemp, "", "  ")
 	if err != nil {
-		log.Fatal(err.Error())
+		log.Fatalf(err.Error())
 	}
 	fmt.Println(string(lempJSON)) 
 	/*
