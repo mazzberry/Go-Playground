@@ -35,6 +35,9 @@ func main() {
 	if err != nil {
 		log.Fatal(err.Error())
 	}
-	fmt.Println(string(lempJSON))
-	
+	fmt.Println(string(lempJSON)) 
+	/*
+	if any field in the struct starts with a lower case letter, it will be priveted and won't be included in the json output.
+	*/
+
 }
