@@ -37,7 +37,7 @@ func main() {
 	}
 	fmt.Println(string(lempJSON)) 
 	/*
-	if any field in the struct starts with a lower case letter, it will be priveted and won't be included in the json output.
+	if any field in the struct starts with a lower case letter, it will be privet and won't be included in the json output.
 	*/
 
 }
