@@ -1,4 +1,4 @@
-package main
+package main // 2.2.6.1
 
 import (
 	"encoding/json"
@@ -7,7 +7,7 @@ import (
 )
 
 type employee struct {
-	Name   string  `json:"name,omitempty"`
+	Name   string  `json:"name,omitempty"` // omitempty returns zero value for empty fields 
 	Age    uint8   `json:"age,omitempty"`
 	Salary float32 `json:"salary,omitempty"`
 }
@@ -18,6 +18,6 @@ func main() {
 	if err != nil {
 		log.Fatalf(err.Error())
 	}
-	fmt.Printf("JSON data: %s\n", jsonData) // Output: JSON data: {"name":"John Doe","age":30}
+	fmt.Printf("JSON data: %s\n", jsonData) // Output: JSON data: {"name":"John Doe","age":30} 
 
 }
