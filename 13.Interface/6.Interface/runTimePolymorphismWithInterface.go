@@ -1,6 +1,6 @@
 package main
 
-
+import "fmt"
 
 type taxSystem interface {
 	calculateTax() int
@@ -48,7 +48,7 @@ func main() {
 
 	taxSystem := []taxSystem{indianTax, singaporeTax}
 	totalTax := calculateTotalTax(taxSystem)
-	println("Total Tax: ", totalTax)
+	fmt.Println("Total Tax: ", totalTax)
 }
 
 
