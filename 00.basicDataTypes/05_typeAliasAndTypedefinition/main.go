@@ -5,7 +5,7 @@ package main
 
 // bul and bool define the same type
 type bul = bool
-//content and strint define the same type
+//content and string define the same type
 type content = string 
 //UI8 and uint8 define the same type
 type UI8 = uint8
