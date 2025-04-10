@@ -7,7 +7,7 @@ func stringAndRuneCompare(){
 	fmt.Printf("%s type: %T, len: %d\n", s, s, len(s))
 
 	rs := []rune(s)
-	fmt.Printf("%s type: %T, len: %d\n", rs, rs, len(rs))
+	fmt.Printf("%s type: %T, len: %d\n", string(rs), rs, len(rs))
 }
 
 /* []rune, byte and string could convert to each other */
