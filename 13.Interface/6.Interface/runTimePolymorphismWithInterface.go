@@ -37,7 +37,8 @@ func (u *usaTax) calculateTax() int {
 }
 
 func main() {
-	indianTax := &indianTax{taxPercentage: 10,
+	indianTax := &indianTax{
+		taxPercentage: 10,
 		income: 100000,
 	}
 	singaporeTax := &singaporeTax{
