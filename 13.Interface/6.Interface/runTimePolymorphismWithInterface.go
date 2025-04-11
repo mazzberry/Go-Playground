@@ -39,14 +39,19 @@ func (u *usaTax) calculateTax() int {
 func main() {
 	indianTax := &indianTax{
 		taxPercentage: 10,
-		income: 100000,
+		income:        100000,
 	}
 	singaporeTax := &singaporeTax{
 		taxPercentage: 15,
 		income:        200000,
 	}
+	usaTax := &usaTax{
+		taxPercentage: 20,
+		income:        300000,
+	}
+	
 
-	taxSystem := []taxSystem{indianTax, singaporeTax}
+	taxSystem := []taxSystem{indianTax, singaporeTax, usaTax}
 	totalTax := calculateTotalTax(taxSystem)
 	fmt.Println("Total Tax: ", totalTax)
 }
@@ -54,6 +59,7 @@ func main() {
 func calculateTotalTax(taxSystems []taxSystem) int {
 	var totalTax int
 	for _, t := range taxSystems {
+		fmt.Println(t)
 		totalTax += t.calculateTax() // در اینجا runtime polymorphism رخ می دهد
 	}
 	return totalTax
