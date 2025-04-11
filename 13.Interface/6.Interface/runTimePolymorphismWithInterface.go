@@ -39,17 +39,16 @@ func (u *usaTax) calculateTax() int {
 func main() {
 	indianTax := &indianTax{
 		taxPercentage: 10,
-		income:        100000,
+		income:        1000,
 	}
 	singaporeTax := &singaporeTax{
 		taxPercentage: 15,
-		income:        200000,
+		income:        1000,
 	}
 	usaTax := &usaTax{
 		taxPercentage: 20,
-		income:        300000,
+		income:        1000,
 	}
-	
 
 	taxSystem := []taxSystem{indianTax, singaporeTax, usaTax}
 	totalTax := calculateTotalTax(taxSystem)
