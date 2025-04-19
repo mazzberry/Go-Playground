@@ -19,7 +19,7 @@ func main() {
 	err := validate("","")
 	if err != nil {
 		if err, ok := err.(*inputError); ok {
-			fmt.Println(err)
+			fmt.Println(err, ok)
 			fmt.Printf("missing field is %s\n", err.getMissingField())
 			}
 	}
