@@ -1,1 +1,23 @@
-package main
+package main // 3.3.3
+
+import (
+	"fmt"
+	"sync"
+	"time"
+)
+
+func main() {
+	var wg sync.WaitGroup
+	wg.Add(2)
+	go sleep(&wg, time.Second * 1)
+	go sleep(&wg, time.Second * 2)
+
+	wg.Wait()
+	fmt.Println("All goroutines finished")
+}
+
+func sleep(wg *sync.WaitGroup, t time.Duration) {
+	defer wg.Done()
+	time.Sleep(t)
+	fmt.Println("finished execution")
+}
