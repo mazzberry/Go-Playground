@@ -23,20 +23,20 @@ func main() {
 	//1
 	var employee Employee = FullTimeEmployees[0]
 	salary, tax := employee.SalaryCalculator(float64(FullTimeEmployees[0].ExtraHours))
-	fmt.Printf("Employee: %d, Salary: %.2f, Tax: %.2f\n", employee, salary, tax)
+	fmt.Printf("Employee: %v, Salary: %.2f, Tax: %.2f\n", employee, salary, tax)
 	//2
 	employee = FullTimeEmployees[1]
 	salary, tax = employee.SalaryCalculator(float64(FullTimeEmployees[1].ExtraHours))
-	fmt.Printf("Employee: %d, Salary: %.2f, Tax: %.2f\n", employee, salary, tax)
+	fmt.Printf("Employee: %v, Salary: %.2f, Tax: %.2f\n", employee, salary, tax)
 
 	//3
 	employee = PartTimeEmployees[0]
 	salary, tax = employee.SalaryCalculator(float64(PartTimeEmployees[0].PartTimeHours))
-	fmt.Printf("Employee: %d, Salary: %.2f, Tax: %.2f\n", employee, salary, tax)
+	fmt.Printf("Employee: %v, Salary: %.2f, Tax: %.2f\n", employee, salary, tax)
 	//4
 	employee = PartTimeEmployees[1]
 	salary, tax = employee.SalaryCalculator(float64(PartTimeEmployees[1].PartTimeHours))
-	fmt.Printf("Employee: %d, Salary: %.2f, Tax: %.2f\n", employee, salary, tax)
+	fmt.Printf("Employee: %v, Salary: %.2f, Tax: %.2f\n", employee, salary, tax)
 
 }
 
