@@ -1,4 +1,4 @@
-package main
+package main //best practice of Abstraction
 
 import "fmt"
 
@@ -14,29 +14,37 @@ func main() {
 		{Id: 4, NationalCode: "3519864", FullName: "Hasan", PartTimeHours: 30},
 	}
 
-	// ShiftEmployee := []ShiftEmployee{
-	// 	{Id: 1, NationalCode: "13512124125", FullName: "homeira", ShiftHours: 120},
-	// 	{Id: 2, NationalCode: "1234567890", FullName: "Ali Rezaei", ShiftHours: 80},
-	// 	{Id: 3, NationalCode: "1312521232", FullName: "Mohammad", ShiftHours: 140},
-	// }
+	ShiftEmployee := []ShiftEmployee{
+		{Id: 1, NationalCode: "13512124125", FullName: "homeira", ShiftHours: 120},
+		{Id: 2, NationalCode: "1234567890", FullName: "Ali Rezaei", ShiftHours: 80},
+		{Id: 3, NationalCode: "1312521232", FullName: "Mohammad", ShiftHours: 140},
+	}
 
 	//1
 	var employee Employee = FullTimeEmployees[0]
 	salary, tax := employee.SalaryCalculator(float64(FullTimeEmployees[0].ExtraHours))
-	fmt.Printf("Employee: %v, Salary: %.2f, Tax: %.2f\n", employee, salary, tax)
+	fmt.Printf("fullEmployee: %v, Salary: %.2f, Tax: %.2f\n", employee, salary, tax)
 	//2
 	employee = FullTimeEmployees[1]
 	salary, tax = employee.SalaryCalculator(float64(FullTimeEmployees[1].ExtraHours))
-	fmt.Printf("Employee: %v, Salary: %.2f, Tax: %.2f\n", employee, salary, tax)
+	fmt.Printf("fullEmployee: %v, Salary: %.2f, Tax: %.2f\n", employee, salary, tax)
 
 	//3
 	employee = PartTimeEmployees[0]
 	salary, tax = employee.SalaryCalculator(float64(PartTimeEmployees[0].PartTimeHours))
-	fmt.Printf("Employee: %v, Salary: %.2f, Tax: %.2f\n", employee, salary, tax)
+	fmt.Printf("partEmployee: %v, Salary: %.2f, Tax: %.2f\n", employee, salary, tax)
 	//4
 	employee = PartTimeEmployees[1]
 	salary, tax = employee.SalaryCalculator(float64(PartTimeEmployees[1].PartTimeHours))
-	fmt.Printf("Employee: %v, Salary: %.2f, Tax: %.2f\n", employee, salary, tax)
+	fmt.Printf("partEmployee: %v, Salary: %.2f, Tax: %.2f\n", employee, salary, tax)
+	//5
+	employee = ShiftEmployee[0]
+	salary, tax = employee.SalaryCalculator(float64(ShiftEmployee[0].ShiftHours))
+	fmt.Printf("shiftEmployee: %v, Salary: %.2f, Tax: %.2f\n", employee, salary, tax)
+	//6
+	employee = ShiftEmployee[1]
+	salary, tax = employee.SalaryCalculator(float64(ShiftEmployee[1].ShiftHours))
+	fmt.Printf("shiftEmployee: %v, Salary: %.2f, Tax: %.2f\n", employee, salary, tax)
 
 }
 
