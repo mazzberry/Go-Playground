@@ -7,4 +7,4 @@ Composition is "Has a" type of OOP Definition
 <br>
 In the best practice,<br> the programmer could implement the parent class only as a type in the child structs<br>
 <h1>We call it Embedded Struct</h1> <br>
-<h2>And this section is name Embedded types</h2>
+<h2>And this section is named Embedded types</h2>
