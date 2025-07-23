@@ -12,61 +12,52 @@ type Person struct {
 	HairColor string
 }
 
-type PersonBuilder struct {
-	Person
-}
+type PersonOptions func(*Person)  
 
 func main() {
 
-	//  1.
-	person1 := Person{Name: "Maryam", Age: 20}
-
-	person1.LastName = "Razzagh Nejad"
-
-	// 2.
-	personBuilder := &PersonBuilder{}
-	person2 := personBuilder.SetName("Alireza").SetAge(19).SetLastName("Hosseini").SetGender("Male").SetHairColor("black").SetHeight(186).SetWeight(105)
-
-	fmt.Printf("\nPerson1 : %+v\n", person1)
-	fmt.Printf("\nPerson2 : %+v\n", person2)
-
 }
 
-func (builder *PersonBuilder) SetName(name string) *PersonBuilder {
-	builder.Name = name
-	return builder
+func SetName(name string) PersonOptions{
+	return func(person *Person){
+		person.Name = name
+	}
 }
 
-func (builder *PersonBuilder) SetAge(age int) *PersonBuilder {
-	builder.Age = age
-	return builder
+func SetAge(age int) PersonOptions{
+	return func(person *Person) {
+		person.Age = age
+	}
 }
 
-func (builder *PersonBuilder) SetLastName(lastName string) *PersonBuilder {
-	builder.LastName = lastName
-	return builder
+func SetLastName(lastName string) PersonOptions {
+	return func(person *Person) {
+		person.LastName = lastName
+	}
 }
 
-func (builder *PersonBuilder) SetGender(gender string) *PersonBuilder {
-	builder.Gender = gender
-	return builder
+func SetGender(gender string) PersonOptions{
+	return func(person *Person) {
+		person.Gender = gender
+	}
 }
 
-func (builder *PersonBuilder) SetHeight(height float64) *PersonBuilder {
-	builder.Height = height
-	return builder
+func SetHeight(height float64) PersonOptions{
+	return func(person *Person) {
+		person.Height = height
+	}
 }
 
-func (builder *PersonBuilder) SetWeight(weight float64) *PersonBuilder {
-	builder.Weight = weight
-	return builder
+func SetWeight(weight float64) PersonOptions{
+	return func(person *Person) {
+		person.Weight = weight
+	}
 }
 
-func (builder *PersonBuilder) SetHairColor(hairColor string) *PersonBuilder {
-	builder.HairColor = hairColor
-	return builder
+func SetHairColor(hairColor string) PersonOptions{
+	return func(person *Person) {
+		person.HairColor = hairColor
+	}
 }
 
-func (builder *PersonBuilder) Build() Person {
-	return builder.Person
-}
+
