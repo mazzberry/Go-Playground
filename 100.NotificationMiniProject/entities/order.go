@@ -3,8 +3,8 @@ package entities
 type Order struct {
 	Id int
 	UserFullName string
-	UserEmail string
-	UserPhone string
+	UserId string
 	Price float64
 	Status bool
+	NotificationType NotificationType
 }
