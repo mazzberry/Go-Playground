@@ -1,4 +1,4 @@
-module modexpl
+module github.com/mazzberry/Go-Playground/tree/main/14.Modules/1.example
 
 go 1.22.2
 
