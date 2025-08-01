@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/mazzberry/TestModule"
 	jalaali "github.com/jalaali/go-jalaali"                                      //outer module
 	"github.com/mazzberry/Go-Playground/tree/main/14.Modules/2.example/services" //inner package
 )
@@ -23,5 +24,11 @@ func main() {
 
 	fmt.Printf("%v", service)
 	fmt.Printf("%v", service2)
+
+	x := mathop.Add(1,5) 
+	y := mathop.Subtract(7,3)
+
+	fmt.Printf("sum: %d\nsub: %d", x, y )
+
 
 }
