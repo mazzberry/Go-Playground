@@ -28,7 +28,7 @@ func SumInt(slc []int) (sum int) {
 	return
 }
 
-func Sum[T int | float64](slc []T) (sum T) {
+func Sum[T Number](slc []T) (sum T) {
 	for _, v := range slc {
 		sum += v
 	}
