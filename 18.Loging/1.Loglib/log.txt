@@ -1,0 +1,10 @@
+2025/10/14 09:47:05 start of main func
+
+2025/10/14 09:47:05 start of sum
+
+2025/10/14 09:47:05 
+end of the sum operation
+
+2025/10/14 09:47:05 
+end main func
+
