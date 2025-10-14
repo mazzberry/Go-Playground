@@ -8,3 +8,13 @@ end of the sum operation
 2025/10/14 09:47:05 
 end main func
 
+2025/10/14 11:01:12 main.go:19: start of main func
+
+2025/10/14 11:01:12 main.go:26: start of sum
+
+2025/10/14 11:01:12 main.go:28: 
+end of the sum operation
+
+2025/10/14 11:01:12 main.go:21: 
+end main func
+
