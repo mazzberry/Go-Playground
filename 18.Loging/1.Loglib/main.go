@@ -6,24 +6,38 @@ import (
 	"os"
 )
 
+var (
+	errorLogger *log.Logger
+	warnLogger  *log.Logger
+	infoLogger  *log.Logger
+)
+
 func init() {
-	file, err := os.OpenFile("log.txt", os.O_CREATE | os.O_APPEND | os.O_WRONLY, 0666)
+
+	file, err := os.OpenFile("log.txt", os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0666)
 	if err != nil {
 		log.Fatalln("something went wrong with log file", err)
 	}
-	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
+
+	flags := log.Ldate | log.Ltime | log.Lshortfile
+
+	log.SetFlags(flags)
 	log.SetOutput(file)
+
+	errorLogger = log.New(file, "Error : ", flags)
+	warnLogger = log.New(file, "warning : ", flags)
+	infoLogger = log.New(file, "info : ", flags)
 }
 
 func main() {
-	log.Println("start of main func\n")
+	warnLogger.Println("start of main func\n")
 	sum(2, 3)
-	log.Println("\nend main func\n")
+	warnLogger.Println("\nend main func\n")
 
 }
 
 func sum(a, b int) {
-	log.Println("start of sum\n")
+	infoLogger.Println("start of sum\n")
 	fmt.Println(a + b)
-	log.Println("\nend of the sum operation\n")
+	errorLogger.Println("\nend of the sum operation\n")
 }
