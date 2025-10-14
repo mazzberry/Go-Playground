@@ -11,6 +11,7 @@ func init() {
 	if err != nil {
 		log.Fatalln("something went wrong with log file", err)
 	}
+	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
 	log.SetOutput(file)
 }
 
