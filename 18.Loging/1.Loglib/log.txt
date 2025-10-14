@@ -18,3 +18,13 @@ end of the sum operation
 2025/10/14 11:01:12 main.go:21: 
 end main func
 
+warning : 2025/10/15 01:29:40 main.go:33: start of main func
+
+info : 2025/10/15 01:29:40 main.go:40: start of sum
+
+Error : 2025/10/15 01:29:40 main.go:42: 
+end of the sum operation
+
+warning : 2025/10/15 01:29:40 main.go:35: 
+end main func
+
