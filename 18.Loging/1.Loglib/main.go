@@ -32,6 +32,7 @@ func init() {
 func main() {
 	warnLogger.Println("start of main func\n")
 	sum(2, 3)
+	fmt.Println("hello")
 	warnLogger.Println("\nend main func\n")
 
 }
