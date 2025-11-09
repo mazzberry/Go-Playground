@@ -1,0 +1,1 @@
+<p>when i call the methods inline like a few , would call it builder</p>
