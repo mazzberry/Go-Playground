@@ -1,26 +1,26 @@
-package main 
+// package main 
 
-import(
-	"fmt"
-)
+// import(
+// 	"fmt"
+// )
 
-func sum (nums ...int) {
-	fmt.Print(nums, " ")
-	total := 0
+// func sum (nums ...int) {
+// 	fmt.Print(nums, " ")
+// 	total := 0
 
-	for _, num := range nums {
-		total += num
-	}
-	fmt.Println(total)
-}
+// 	for _, num := range nums {
+// 		total += num
+// 	}
+// 	fmt.Println(total)
+// }
 
-func main() {
-	sum(1, 2, 3, 4, 5)
-	sum(1,8,9)
+// func main() {
+// 	sum(1, 2, 3, 4, 5)
+// 	sum(1,8,9)
 
-	nums := []int{1,19,2}  // define an array 
-	sum(nums...) // if wanna pass an array to varidic function as argument 
-}
+// 	nums := []int{1,19,2}  // define an array 
+// 	sum(nums...) // if wanna pass an array to varidic function as argument 
+// }
 
 /* 
 در اینجا تابعی تعریف کردیم که تعداد دلخواهی از آرگومان‌ها از نوع 
@@ -39,3 +39,20 @@ slice
 sum(nums…) 
 به داخل تابع انتقال بدید.
 */
+
+package main
+import "fmt"
+func sum(nums ...int) {
+	total := 0
+	fmt.Println(nums, " ")
+	for _, num := range nums {
+		total += num
+		
+	}
+	fmt.Println(total)
+}
+
+func main(){
+	var nums = []int{24, 56, 77, 78, 89, 90}
+	sum(nums...)
+}

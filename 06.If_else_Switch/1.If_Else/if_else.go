@@ -10,8 +10,8 @@ func main() {
 		println("a is greater than 9")
 	}
 
-	b := 4
-	if b > 3 && b < 5 {
+	
+	if b := 4; b > 3 && b < 5 {
 		fmt.Println(" b is whithing the range")
 	}
 
