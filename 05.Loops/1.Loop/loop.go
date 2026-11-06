@@ -6,7 +6,7 @@ import "fmt"
 func main() {
 
 	// 3 section loops
-	// for initialization ; condition ; counter 
+	// for definition ; condition ; counter / increment 
 
 	sum := 0 
 	for i := 1; i < 10; i++ {
